@@ -4,7 +4,7 @@
     <img align="center" src="assets/gif/coding.gif" alt="Coding" height="200px" />
 </p>
 <p align="center">
-    <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?size=25&color=F75C7E&center=true&vCenter=true&width=540&lines=REPO+LOADER;Help me with one star!"></a>
+    <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?size=25&color=F75C7E&center=true&vCenter=true&width=540&lines=REPO+LOADER;Help+me+with+one+star!"></img></a>
 </p>
 
 ## Description
