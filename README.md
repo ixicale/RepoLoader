@@ -23,7 +23,7 @@
 🚀 Execute the script directly from a remote repository:
 
 ```bash
-python -c "$(curl -fsSL https://raw.githubusercontent.com/ixicale/RepoLoader/main/repo_loader.py)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ixicale/RepoLoader/main/exec.sh)";
 ```
 
 ## Features

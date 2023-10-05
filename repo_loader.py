@@ -15,9 +15,12 @@
 
 Clone all your GitHub repositories to your local machine.
 Usage:
+    Option 1: Run the automated script
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/ixicale/RepoLoader/main/exec.sh)";
+    Option 2: Run the python script, requires python3 venv and 'requests' installed
     python -c "$(curl -fsSL https://raw.githubusercontent.com/ixicale/RepoLoader/main/repo_loader.py)"
 Required:
-    Set your GITHUB_TOKEN environment variable. 
+    Set your Personal Access Token (PAT) on your git config (git config --global github.token).
     More info: https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token
 Optional:
     Set PATH_TO_SAVE_REPOS environment variable to customize the root save directory. Default is '.repos'
@@ -29,11 +32,13 @@ from typing import Dict
 
 import requests
 
+# Get token from your git config
+GC_PERSONAL_ACCESS_TOKEN = 'git config --global github.token'.split(" ")
+PAT = subprocess.run(GC_PERSONAL_ACCESS_TOKEN,capture_output=True,text=True).stdout.strip()
 # Retrieve environment variables
-PAT = os.environ.get("GITHUB_TOKEN")
 PATH_TO_SAVE_REPOS = os.environ.get("PATH_TO_SAVE_REPOS", ".repos")
 if not PAT:
-    print("❌ Please set the GITHUB_TOKEN environment variable.")
+    print("❌ Please set the 'git config --global github.token' environment variable.")
     exit(1)
 
 GH_API = "https://api.github.com"
