@@ -15,7 +15,8 @@
 
 ### Requirements:
 
-- 🛑 REQUIRED: Set your `GITHUB_TOKEN` environment variable to authenticate with GitHub. More info on [creating a GitHub Personal Access Token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
+- 🛑 REQUIRED: Set your `GITHUB_TOKEN`and set it on gitconfig (`git config --global github.token`). More info on [creating a GitHub Personal Access Token](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
+- 🛑 REQUIRED: ssh configured on github! This script use `git clone <ssh_url_repo>`, so its required to have ssh configured on github.
 - ⚙ OPTIONAL: Set `PATH_TO_SAVE_REPOS` environment variable if you wish to customize the directory where repositories will be saved. The default directory is `.repos`.
 
 ## Usage
@@ -35,3 +36,12 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/ixicale/RepoLoader/main/
 ## Feedback
 
 If you encounter any issues or have feedback to improve this script, please raise an issue in the repository.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+## Disclaimer
+
+This project is not affiliated with GitHub, Inc in any way.

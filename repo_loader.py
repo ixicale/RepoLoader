@@ -73,8 +73,9 @@ while True:
             print(f"📦 Cloning {repo_path}...")
             subprocess.run(["git", "clone", repo_url, repo_path])
         else:
-            print(f"📦 Fetching {repo_path}...")
-            subprocess.run(["git", "fetch"], cwd=repo_path)
+            # if repo already exists, continue and don't count it
+            print(f"📦 Skipping {repo_path}...")
+            continue
 
         # Update repo count for each owner
         repos_count_by_user[owner] = repos_count_by_user.get(owner, 0) + 1
