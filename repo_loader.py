@@ -70,11 +70,11 @@ while True:
 
         repo_path = os.path.join(user_path, repo.get("name"))
         if not os.path.exists(repo_path):
-            print(f"📦 Cloning {repo_path}...")
+            print(f"⏬ Cloning {repo_path}...")
             subprocess.run(["git", "clone", repo_url, repo_path])
         else:
             # if repo already exists, continue and don't count it
-            print(f"📦 Skipping {repo_path}...")
+            print(f"💫 Skipping {repo_path}...")
             continue
 
         # Update repo count for each owner
